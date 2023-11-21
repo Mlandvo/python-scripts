@@ -24,7 +24,11 @@ minTime = Entry(clock,textvariable=min,bg="pink",width=15).place(x=150,y=30)
 secTime = Entry(clock,textvariable=sec,bg="pink",width=15).place(x=200,y=30)
 
 #button to set alarm
+def actual_time():
+    alarm.set_alarm_timer = f"{hour.get()}:{min.get()}:{sec.get()}"
+    alarm.alarm(alarm.set_alarm_timer)
+
 #will call function actual_time() from alarmscript.py
-submit = Button(clock,text="Set alarm",fg="red",width=10,command= alarm.actual_time).place(x=110,y=70)
+submit = Button(clock,text="Set alarm",fg="red",width=10,command= actual_time).place(x=110,y=70)
 
 clock.mainloop()

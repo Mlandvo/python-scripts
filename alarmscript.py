@@ -1,7 +1,6 @@
-from tkinter import *
 import datetime
 import time
-import winsound
+from tkinter import *
 
 def alarm(set_alarm_timer):
     while True:
@@ -18,5 +17,6 @@ def alarm(set_alarm_timer):
         print("Date: " + date + " Time: " + now)
 
         if now == set_alarm_timer:
-            print("Time is up!!")
+            tkinter.messagebox.showwarning(title="warning",message="Time is Up")
         break
+
